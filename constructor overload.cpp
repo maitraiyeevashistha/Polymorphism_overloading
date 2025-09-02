@@ -8,15 +8,13 @@ using namespace std;
 
 class add {
 public:
-    add(int a, int b) {
+add(int a, int b) {
         cout << "The sum of the numbers using add(int a, int b) is: " << a + b << endl;
     }
-
-    add(int c, int d, int e) {
+add(int c, int d, int e) {
         cout << "The sum of the numbers using add(int c, int d, int e) is: " << c + d + e << endl;
     }
-
-    add(float f, float g) {
+add(float f, float g) {
         cout << "The sum of the numbers using add(float f, float g) is: " << f + g << endl;
     }
 };
@@ -30,7 +28,8 @@ int main() {
     cout << "Enter the value for b: ";
     cin >> b;
 
-    add obj1(a, b);  // constructor called here
+    add obj1(a, b); 
+    cout<<endl;
 
     cout << "Enter the value for c: ";
     cin >> c;
@@ -39,14 +38,34 @@ int main() {
     cout << "Enter the value for e: ";
     cin >> e;
 
-    add obj2(c, d, e);  // constructor called here
+    add obj2(c, d, e); 
+    cout<<endl;
 
     cout << "Enter the value for f: ";
     cin >> f;
     cout << "Enter the value for g: ";
     cin >> g;
 
-    add obj3(f, g);  // constructor called here
+    add obj3(f, g);  
 
     return 0;
 }
+
+/*Output :
+
+Enter the value for a: 1
+Enter the value for b: 2
+The sum of the numbers using add(int a, int b) is: 3
+
+Enter the value for c: 3
+Enter the value for d: 4
+Enter the value for e: 5
+The sum of the numbers using add(int c, int d, int e) is: 12
+
+Enter the value for f: 5.2
+Enter the value for g: 6.5
+The sum of the numbers using add(float f, float g) is: 11.7
+
+*/
+
+
