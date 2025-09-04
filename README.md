@@ -1,72 +1,159 @@
-# Overloading in Object-Oriented Programming
+# Overloading in C++
 
-This repository provides a theoretical overview of the different types of overloading in object-oriented programming (OOP). Overloading is a fundamental aspect of compile-time (static) polymorphism and allows for more flexible and readable code by enabling multiple definitions under the same name.
+## Name: Maitraiyee Vashistha  
+## PRN: 24070123057  
+## Division: ENTC-A3  
+## Title: Function, Method, Constructor, and Operator Overloading in C++  
 
-## What is Overloading?
+---
 
-Overloading is a feature that allows multiple functions, methods, or operators to share the same name but operate differently depending on their input parameters. It is resolved during compilation and is part of static polymorphism.
+## Aim:  
+*To study and apply different types of overloading in C++*
 
-By using overloading, developers can design consistent interfaces that adapt to different input data types or parameter counts without needing different function names.
+---
 
-## Types of Overloading
+## Introduction
 
-### 1. Function Overloading
+In C++, **overloading** refers to the ability to define multiple functions, constructors, or operators with the same name but different signatures. It is a key feature of **compile-time polymorphism** in object-oriented programming.
 
-Function overloading occurs when multiple functions have the same name but differ in the number or types of their parameters.
+Overloading allows the same operation to behave differently depending on the context (e.g., the number or type of parameters). This increases code readability, provides flexibility, and supports abstraction.
 
-Key characteristics:
-- Differentiated by the function signature (parameter types, number, or order).
-- Return type alone is not sufficient to distinguish overloaded functions.
-- Improves code readability by grouping related operations under a single function name.
+The different types of overloading in C++ are:
 
-Common in languages like C++, Java, and C#.
+- **Function Overloading**
+- **Method Overloading**
+- **Constructor Overloading**
+- **Operator Overloading**
 
-### 2. Method Overloading
+---
 
-Method overloading is a specific form of function overloading that occurs within object-oriented classes.
+## Function Overloading
 
-Key characteristics:
-- Multiple methods with the same name can exist in a class.
-- Methods must differ in their parameter list.
-- Commonly used to provide multiple ways to perform a similar action on an object.
+**Function overloading** occurs when two or more functions in the same scope have the same name but different parameter lists (type, number, or order of parameters). The correct function is selected at compile time based on the arguments provided during the function call.
 
-Widely supported in object-oriented languages such as Java, C#, and C++.
+### Characteristics:
+- Improves code clarity by using one name for similar actions.
+- Return type does **not** play a role in function overloading.
+- Enables multiple ways of performing similar operations.
 
-### 3. Constructor Overloading
+---
 
-Constructor overloading allows a class to have more than one constructor, each with different parameter lists. This enables objects to be initialized in multiple ways.
+## Method Overloading
 
-Key characteristics:
-- Allows different ways of initializing class instances.
-- Can include default constructors, parameterized constructors, and copy constructors.
-- Enhances flexibility in object creation.
+**Method overloading** is a subset of function overloading and occurs inside a class. Multiple member functions (methods) can have the same name as long as their signatures differ.
 
-Constructor overloading is commonly used in both Java and C++.
+### Characteristics:
+- Helps create multiple behaviors for a method in a single class.
+- Allows customization of functionality based on different parameter sets.
+- Promotes organized and modular design within classes.
 
-### 4. Operator Overloading
+---
 
-Operator overloading allows predefined operators (such as +, -, *, etc.) to be redefined for user-defined types (such as classes and structs).
+## Constructor Overloading
 
-Key characteristics:
-- Makes user-defined types behave like built-in types.
-- Enables intuitive syntax when performing operations on custom objects.
-- Must be explicitly defined and is only supported in a few languages (notably C++).
+**Constructor overloading** allows a class to have more than one constructor with different parameter lists. It supports object creation in various ways.
 
-Note: Operator overloading is not supported in Java, but it is a powerful feature in C++.
+### Types of Constructors in Overloading:
 
-## Advantages of Overloading
+1. **Default Constructor**  
+   Initializes data members with default values. Takes no arguments.
 
-- Enhances readability and usability by allowing intuitive naming.
-- Supports polymorphism and improves abstraction.
-- Promotes cleaner and more maintainable code.
-- Allows for flexible API and library design.
+2. **Parameterized Constructor**  
+   Takes parameters to initialize objects with specific values.
 
-## Best Practices
+3. **Copy Constructor**  
+   Creates a new object as a copy of an existing object.
 
-- Overloading should be used when functions or methods conceptually perform the same task but differ in input.
-- Avoid excessive or unclear overloading as it may reduce code readability.
-- Operator overloading should be consistent with common operator behavior to prevent confusion.
+### Characteristics:
+- All constructors share the same name as the class.
+- Overloading allows flexibility in object instantiation.
 
-## Suggested Repository Structure
+---
 
+## Operator Overloading
 
+**Operator overloading** allows existing C++ operators to be redefined for user-defined data types (like classes). It enables natural and intuitive syntax when working with custom objects.
+
+### Characteristics:
+- Only built-in operators can be overloaded; new operators cannot be created.
+- Certain operators (like `::`, `.*`, `sizeof`) cannot be overloaded.
+- Supports both unary and binary operators.
+- Makes custom types behave like primitive types.
+
+---
+
+## Summary Table
+
+| Overloading Type        | Purpose                                                | Defined In            | Key Notes                                               |
+|-------------------------|--------------------------------------------------------|------------------------|----------------------------------------------------------|
+| Function Overloading     | Multiple functions with same name, different parameters| Global or Class Scope | Based on number or type of parameters                   |
+| Method Overloading       | Overloading within a class (member functions)         | Inside Class           | Subset of function overloading                          |
+| Constructor Overloading  | Multiple constructors with different initializations  | Inside Class           | Includes default, parameterized, and copy constructors  |
+| Operator Overloading     | Redefines operator behavior for class objects         | Inside Class           | Enhances object usability and readability               |
+
+---
+
+## Summary of Programs
+
+### Program 1: Function Overloading
+
+1. **Start**
+2. Define a set of functions with the same name but different parameter lists.
+3. Each function performs a similar task (e.g., adding numbers) with different data types or counts.
+4. Call the functions with different arguments in `main()` to demonstrate overloading.
+5. **End**
+
+---
+
+### Program 2: Method Overloading (Within Class)
+
+1. **Start**
+2. Create a class with multiple methods sharing the same name.
+3. Differentiate the methods by varying parameter types or numbers.
+4. Create an object of the class and call each overloaded method.
+5. **End**
+
+---
+
+### Program 3: Constructor Overloading
+
+1. **Start**
+2. Define a class with:
+   - A default constructor
+   - A parameterized constructor
+   - A copy constructor
+3. Demonstrate object creation using all three constructors.
+4. Observe how constructors are automatically called upon object instantiation.
+5. **End**
+
+---
+
+### Program 4: Operator Overloading - Basic Arithmetic Operator
+
+1. **Start**
+2. Define a class with numeric data members.
+3. Overload an arithmetic operator (e.g., `+`) to perform addition on object data.
+4. Create two objects and use the overloaded operator between them.
+5. Display the result.
+6. **End**
+
+---
+
+### Program 5: Operator Overloading - Relational Operator
+
+1. **Start**
+2. Define a class with data members to compare.
+3. Overload a relational operator (e.g., `==`) to compare object data.
+4. Use this operator to compare two objects.
+5. Display whether they are equal.
+6. **End**
+
+---
+
+## Conclusion
+
+Overloading in C++ enhances the language's expressiveness and allows developers to design clean, intuitive, and flexible interfaces. By enabling multiple versions of functions, constructors, and operators, overloading supports polymorphism and reduces the need for complex naming conventions.
+
+Mastering overloading helps write more reusable, maintainable, and efficient code, especially in large-scale or resource-sensitive applications.
+
+---
