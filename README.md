@@ -1,8 +1,5 @@
 # Overloading in C++
 
-## Name: Maitraiyee Vashistha  
-## PRN: 24070123057  
-## Division: ENTC-A3  
 ## Title: Function, Method, Constructor, and Operator Overloading in C++  
 
 ---
